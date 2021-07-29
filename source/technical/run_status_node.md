@@ -6,9 +6,11 @@ description: Status Node is an Ethereum client supporting the Status app.
 
 ## Why Run Status Node?
 
-Currently, we don't provide any incentives for running Status Nodes. We are working hard to solve this problem. Our intent is to increase the size of the Waku network, thereby improving how decentralized and safe our platform is.
+Currently, there are no crypto incentives for running Status Nodes. We are working hard to solve this problem. Our intent is to increase the size of the Waku network, improving how decentralized and safe our platform is.
 
-Another reason is privacy. In the current setup, most nodes - both relay and historical ones - are running as part of Status infrastructure. This means that Status has a wide view of most of the network. While all traffic in Waku is encrypted, the metadata that could be gathered this way can leak some information. If one wants to avoid that, the best option is to run a node on your own and configure it in the Status app.
+### Privacy
+
+Another reason is privacy. In the current setup, most nodes - both relay and historical ones - are running as part of Status infrastructure. This means that Status has a wide view of most of the network. While all traffic in Waku is encrypted, the metadata that could be gathered this way can leak some information. The best way to avoid that is to run your own node and configure it in the Status app.
 
 ### Community
 
@@ -70,7 +72,7 @@ For more details consult the [systemd](https://github.com/status-im/status-go/bl
 
 ### Building
 
-First you'll have to build a `statusd` binary:
+First, build a `statusd` binary:
 ```
 mkdir ~/go/src/github.com/status-im
 git clone https://github.com/status-im/status-go ~/go/src/github.com/status-im/status-go
@@ -89,7 +91,7 @@ Note that the default settings will not let you run a full relay and history nod
 
 ### Configuration
 
-The configuration is provided as a JSON file. Here is a basic config that will let you run a Waku node that also stores historical messages:
+The configuration is provided as a JSON file. Here is a basic config to run a Waku node that also stores historical messages:
 
 `./config.json`
 ```json
@@ -117,7 +119,7 @@ $ ./build/bin/statusd -c ./config.json
 
 For more example config files, check out [this directory](https://github.com/status-im/status-go/tree/develop/config/cli). For details on the config options, consult this [README](https://github.com/status-im/status-go/blob/develop/config/README.md).
 
-You can read the comments for the options in [this source file](https://github.com/status-im/status-go/blob/develop/params/config.go).
+You can also read the comments for the options in [this source file](https://github.com/status-im/status-go/blob/develop/params/config.go).
 
 ### Metrics
 
